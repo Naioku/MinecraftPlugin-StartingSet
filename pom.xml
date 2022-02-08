@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.adrian_komuda</groupId>
-    <artifactId>MinecraftPlugin-CustomPlayers</artifactId>
+    <artifactId>MinecraftPlugin-StartingSet</artifactId> <!-- specify artifactId (mostly it is Your project name) -->
     <version>0.1</version>
     <packaging>jar</packaging>
 
     <properties>
-        <mainClass>${project.groupId}.custom_players.Main</mainClass>
+        <mainClass>${project.groupId}.plugin_package.Main</mainClass> <!-- specify Main class path -->
         <author>Naioku</author>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
