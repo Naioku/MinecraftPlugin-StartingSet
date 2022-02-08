@@ -1,0 +1,10 @@
+name: PluginName
+version: 0.1
+author: Naioku
+main: pl.adrian_komuda.plugin_package.Main
+description: Description.
+api-version: 1.18
+
+commands:
+  command1:
+    description: Example command.
