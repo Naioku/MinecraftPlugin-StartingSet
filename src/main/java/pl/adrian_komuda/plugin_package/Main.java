@@ -1,10 +1,13 @@
 package pl.adrian_komuda.plugin_package;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import pl.adrian_komuda.plugin_package.commands.Commands;
+import pl.adrian_komuda.plugin_package.commands.MinecraftCommandsReceiver;
+import pl.adrian_komuda.plugin_package.commands.console.AllConsoleCommands;
+import pl.adrian_komuda.plugin_package.commands.players.AllPlayersCommands;
+import pl.adrian_komuda.plugin_package.commands.players_and_consol.AllPlayersAndConsoleCommands;
 
 public class Main extends JavaPlugin {
-    Commands commander;
+    MinecraftCommandsReceiver commander = new MinecraftCommandsReceiver(this);
 
     @Override
     public void onEnable() {
@@ -18,7 +21,20 @@ public class Main extends JavaPlugin {
     }
 
     private void setUpCommands() {
-        commander = new Commands(this);
-        getCommand("command1").setExecutor(commander);
+        setUpConsoleCommands();
+        setUpPlayersCommands();
+        setUpPlayersAndConsoleCommands();
+    }
+
+    private void setUpConsoleCommands() {
+        getCommand(AllConsoleCommands.COMMAND1.getFullName()).setExecutor(commander);
+    }
+
+    private void setUpPlayersCommands() {
+        getCommand(AllPlayersCommands.COMMAND2.getFullName()).setExecutor(commander);
+    }
+
+    private void setUpPlayersAndConsoleCommands() {
+        getCommand(AllPlayersAndConsoleCommands.COMMAND3.getFullName()).setExecutor(commander);
     }
 }
