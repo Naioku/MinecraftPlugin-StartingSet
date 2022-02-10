@@ -6,11 +6,5 @@ description: Description.
 api-version: 1.18
 
 commands:
-  prefix_command1:
-    description: Example command1. Only for console.
-
-  prefix_command2:
-    description: Example command2. Only for players.
-
-  prefix_command3:
-    description: Example command3. For players and console.
+  prefix:
+    description: To run every command from "prefix" plugin.

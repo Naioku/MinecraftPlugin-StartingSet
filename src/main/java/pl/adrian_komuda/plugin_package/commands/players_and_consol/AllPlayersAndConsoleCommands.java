@@ -7,6 +7,8 @@ import pl.adrian_komuda.plugin_package.commands.CommandsPerformers;
 import pl.adrian_komuda.plugin_package.commands.console.particular_commands.Command1;
 import pl.adrian_komuda.plugin_package.commands.players_and_consol.particular_commands.Command3;
 
+import java.util.List;
+
 public enum AllPlayersAndConsoleCommands {
     COMMAND3("command3", new Command3());
 
@@ -18,11 +20,11 @@ public enum AllPlayersAndConsoleCommands {
         this.commandPerformer = commandPerformer;
     }
 
-    public String getFullName() {
-        return AllCommandsData.commandPrefix + commandMinecraftName;
+    public String getName() {
+        return commandMinecraftName;
     }
 
-    public void perform(CommandSender commandSender, Command commandFromConsole, String[] args) {
-        commandPerformer.perform(commandSender, commandFromConsole, args);
+    public void perform(CommandSender commandSender, String command, List<String> args) {
+        commandPerformer.perform(commandSender, command, args);
     }
 }

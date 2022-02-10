@@ -27,8 +27,10 @@ To add a new command:
    or CommandPerformers).
 2. Then add that new command to the proper enum (which are in previously mentioned packages).
    Set name and newly created command-class.
-3. Set up an executor in Main class. (in proper method: player, console, etc.).
-4. Don't forget to add command to plugin.yml!
+   
+Compared to previous version, now You don't have to neither add new command to a plugin.yml nor register it
+in Main class. Everything You have to do revolves around new class-command, interfaces and commands-enums.
+I also added "tab completion".
 
 I hope I didn't forget anything, and it will save Your time in coding. :)
 

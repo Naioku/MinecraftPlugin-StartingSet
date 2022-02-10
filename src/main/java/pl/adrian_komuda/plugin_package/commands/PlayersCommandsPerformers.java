@@ -4,6 +4,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 public interface PlayersCommandsPerformers {
-    void perform(Player player, Command commandFromConsole, String[] args);
+    void perform(Player player, String command, List<String> args);
 }
